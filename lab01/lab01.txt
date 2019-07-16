@@ -1,0 +1,69 @@
+
+Lab 1 for CS 265 By Grant Reynard 
+
+Q1:got it
+
+Q2: This:
+total 9
+-rw-r--r-- 1 gjr43 gjr43 8060 Jul  3 20:38  funny
+-rwxr-xr-x 1 gjr43 gjr43  240 Jul  3 20:35  hello.bash
+-rw-rw-r-- 1 gjr43 gjr43    1 Jul  3 20:04 'vi vi_lab'
+
+Q3: as previously stated I give my self read and write premmitions every one else just has read 
+gjr43@tux2:~/CS265/lab01$ chmod 644 funny
+gjr43@tux2:~/CS265/lab01$ ls -l
+total 9
+-rw-r--r-- 1 gjr43 gjr43 8060 Jul  3 20:38  funny
+
+Q4: So now I can read write and exicute and every one else can only exicute.
+gjr43@tux2:~/CS265/lab01$ chmod 755 funny
+gjr43@tux2:~/CS265/lab01$ ls -l
+total 9
+-rwxr-xr-x 1 gjr43 gjr43 8060 Jul  3 20:38  funny
+
+Q5: yes
+
+Q6:yes 
+
+Q7: I was not sucsessful in opening 
+
+Q8: chmod 700 hello.bash or chmod 755 hello.bash (if thats what you mean heres another just in case chmod w hello.bash)
+
+Q9: so opening in the vi editor I was able to make a change wivh leads me to beleave that I chmod'ed wrong. Because I should
+not be able to write any thing here is my code:
+gjr43@tux2:~/CS265/lab01$ chmod 400 funny
+gjr43@tux2:~/CS265/lab01$ vi funny
+gjr43@tux2:~/CS265/lab01$ vi funny
+I sayed warning you are changing a read only file however it saved the changes 
+
+Q10: This:
+gjr43@tux2:~/public_html$ ls *
+annoy     index.html  itemList-2cols  UnitTestingPhase
+annoy.cc  itemList    TelecomTruths
+gjr43@tux2:~/public_html$ ls a*
+annoy  annoy.cc
+gjr43@tux2:~/public_html$ ls *m*
+index.html  itemList  itemList-2cols  TelecomTruths
+gjr43@tux2:~/public_html$ ls anno?
+annoy
+gjr43@tux2:~/public_html$ ls annoy?
+ls: cannot access 'annoy?': No such file or directory
+
+Q11: First i wrote "2 files to edit" then it took me to edit a file names "a" but it only seemed to create "a"
+gjr43@tux2:~/public_html$ vi a space
+2 files to edit
+gjr43@tux2:~/public_html$ ls
+a      annoy.cc    itemList        TelecomTruths
+annoy  index.html  itemList-2cols  UnitTestingPhase
+gjr43@tux2:~/public_html$
+
+Q12: gjr43
+
+
+
+
+
+
+
+
+
