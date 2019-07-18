@@ -1,0 +1,9 @@
+#!/bin/bash
+IFS=-
+for song in *.mp3; do
+read -a songinfo <<< "$song"
+artist=${songinfo[0]% }
+title=${songinfo[1]# }
+mkdir --parents "$artist"
+mv "$song" "$artist/$title"
+done

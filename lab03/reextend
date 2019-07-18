@@ -1,0 +1,12 @@
+#!/bin/bash
+if [ $# != 2 ] ; then
+echo "error missing argument"
+exit 1
+fi
+formatone=$1
+formattwo=$2
+for i in *${formatone}; do
+base=`basename $i ${formatone}`
+mv $i ${base}${formattwo}
+done
+ 
