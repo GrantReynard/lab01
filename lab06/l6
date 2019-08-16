@@ -1,0 +1,95 @@
+Data Structures and Algorrithms
+
+Q1:Describe each of the following ADTs:
+i:List-a sequence of elements, consecutive eliments are linkeds 
+with a pointer 
+ii:Strack-when programes on the linux box run they remove data from the stack
+as the program functions, stack size referis to ho much memory is 
+allocated in the stack
+iii:Queue: stutured in it gose to the back of the line when added and 
+removed from the front of the line when removed and the remaining move 
+forward
+iv:dictionary(map):a collection of keys that have associations with a 
+value or multable values
+
+Q2: Given a sorted array with n items, how many times (at most) will the 
+binary search compare elements? Explain your answer.
+(log_2 (n))+1 times, this is becasue every time bin serch halfs
+ the domaine of numbers everytime it it compares 
+
+
+Q3: Given an array with n items, how many times (at most) will 
+the linear search compare elements? Explain your answer.
+n-1 times this is because it individually compares every set of elements
+unitill it finds what ist looking for 
+
+Q4: Give an example when using linear search would be preferable 
+over the binary search.
+if the list is not sorted 
+
+Q5: Show the effect of the quicksort, from the lecture notes, on 
+the following array (always choose the left-most element in a 
+sub-array as the pivot). Show the array at the beginning of each 
+level of calls. Mark the pivot of each sub-array.
+*84* 37 93 82 98 27 63 73 93 27 75 55 45 8
+37 82 27 63 73 27 75 55 45 8 *84* 93 98 93 
+*37* 82 27 63 73 27 75 55 45 8 84 *93* 98 93 
+27 27 8 *37* 82 63 73 75 55 45 84 *93* 98 93 
+*27* 27 8 37 *82* 63 73 75 55 45 84 93 *98* 93 
+8 *27* 27 37 63 73 75 55 45 *82* 84 93 93 *98* 
+8 27 27 37 *63* 73 75 55 45 82 84 93 93 98 
+8 27 27 37 55 45 *63* 73 75 82 84 93 93 98 
+8 27 27 37 *55* 45 63 *73* 75 82 84 93 93 98 
+8 27 27 37 45 55 63 *73* 75 82 84 93 93 98 
+8 27 27 37 45 55 63 73 *75* 82 84 93 93 98 
+8 27 27 37 45 55 63 73 75 82 84 93 93 98 
+
+Q6: See the file d1.c from the lab directory. Display the list that's 
+built.
+[3, 24, 06]
+
+
+Q7: See the file ll.py from the lab directory. Display the list that's
+ built.
+[13, [28, [24, [3, None ] ] ] ]
+
+Q8: Compile and run the file ptrs.c from the lab directory.
+ Why are the 2 sets of output different? What's going on there?
+s isnt pointing at the buffer,so the s isnt cahnging with the buffer, 
+causing 2 seprate ouputs
+
+
+Q9: See the file hash.c from the lab directory. Display the 
+resulting table.
+3 -> [Bob,38]->[Cos,86]
+4 -> [Vera,99]->[Nash,11]->[Kate,28]->[Jaga,24]
+5 -> [Jesse,78]
+
+Q10: From the table above, write a function called find, that
+ takes a key and a reference to an integer, fills in the 
+reference w/the appropriate value (if found), and returns 1 (true). 
+If the key is not found, return 0 (false). You may assume that
+ p_ans already points to a valid location. So:
+
+int find( char *key, int *p_ans );
+Can be called like this:
+
+ char *name = "Bob";
+int data;
+if( find( name, &data ))
+   printf( "Found %s.  (S)he's %i\n\n", name, data );
+else
+   printf( "\nCouldn't find %s\n\n", name );
+
+This....
+
+int find( char *key, int *p_ans ){
+	while(key != NULL){
+		if(*key == *p_ans){
+			return 1;
+		}
+		key = key->next;
+	}
+	return 0;
+}
+
